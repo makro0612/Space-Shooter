@@ -1,11 +1,19 @@
-const canvas = document.getElementById("canvas")
-const ctx = canvas.getContext("2d")
+const canvas = document.getElementById("gamecanvas")
 
-const player = {
-    x: canvas.Width/2,
-    y: canvas.height - 100,
-    Width: 50,
-    Height: 50,
-    speed: 10,
-    bullets: [],
-}
+const HEIGHT = 500
+const WIDTH = 700
+
+canvas.height = HEIGHT
+canvas.width = WIDTH
+
+const ctx = canvas.getContext("2d") 
+const ship = document.getElementById("shipImg");
+
+
+skip = ctx.drawImage(ship, (canvas.width/2)-35, 450);
+
+
+/*max-width: 100%;
+    height: auto;
+    z-index: 100
+*/
