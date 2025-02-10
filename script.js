@@ -23,17 +23,31 @@ const bullet1 = {
 }
 
 
+function shoot() {
+    ship1.bullets.push({
+        x: ship1.x + 25,
+        y: ship1.y,
+        
+    });
+    console.log(ship1.bullets);
+}
 
 function drawShip(ship) {
+    
     ctx.drawImage(ship.elm, ship.x, ship.y);
 }
 
 function drawBullet(bullet) {
-    if (bullet.visible) {
-        ctx.drawImage(bullet.elm, bullet.x, bullet.y);
+        for (let i = 0; i < ship1.bullets.length; i++) {
+            ctx.drawImage(bullet.elm, ship1.bullets[i].x, ship1.bullets[i].y);
+            ship1.bullets[i].y -= 15;
+        }
+        
+        
+       
         
     }
-}
+
 
 function oppdater() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -52,12 +66,15 @@ document.addEventListener("keydown", function(event) {
         ship1.x += 10;
     }
     else if (event.key === " ") {
-        bullet1.visible = true;
+        
         bullet1.x = ship1.x + 25;
         bullet1.y = ship1.y;
+        shoot();
     }
     
 
 });
+
+
 
 
