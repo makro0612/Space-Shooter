@@ -28,17 +28,23 @@ html {
 
 body{
     background-color: black;
-    display: flex;
-    justify-content: center;
+    /* display: flex;
+    justify-content: center; */
     min-height: 100vh;
-}
-
-canvas{
+  }
+  
+  canvas{
     background-color: rgb(20, 0, 20);
+    margin: auto;
+    display: block;
     /* height: 500px;
     width: 500px; */
 }
 
 #shipImg{
+  display: none;
+}
+
+#bulletImg{
   display: none;
 }
