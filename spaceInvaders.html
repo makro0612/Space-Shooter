@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space-Shooter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <p id="score">Score: 0</p>
+    <canvas id="gamecanvas">
+
+    </canvas>
+    <div class="gameover" id="failScreen">
+        GAME OVER
+        <p id="scoreFail">Score: 0</p>
+
+        <button onclick="restart()">
+            RESTART
+        </button>
+    </div>
+    <img id="shipImg"  src="bilder/ship.png" />
+    <img id="bulletImg" src="bilder/bulletImg.png" alt="">
+    <img id="enemyImg" src="bilder/enemyshipUback.png" alt="">
+    <script src = "script.js"></script>
+</body>
+
+</html>
